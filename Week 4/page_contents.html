@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Blog - Tama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8B0000;
+      --primary-light: #b22222;
+      --secondary: #f2f2f2;
+      --white: #fff;
+      --text: #222;
+      --shadow: 0 4px 24px rgba(139,0,0,0.08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--secondary);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    nav#topmenu {
+      background: var(--primary);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav#topmenu ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex; justify-content: center; gap: 40px;
+      height: 54px; align-items: center;
+    }
+    nav#topmenu a {
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+      padding: 8px 14px;
+      border-radius: 6px;
+    }
+    nav#topmenu a:hover {
+      background: var(--primary-light);
+      color: #fff;
+    }
+
+    header.site-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(90deg, #fff 60%, #f8eaea 100%);
+      padding: 36px 0 18px 0;
+      margin-bottom: 0;
+    }
+    header.site-header h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin: 0 0 8px 0;
+      letter-spacing: 1px;
+    }
+    header.site-header p {
+      color: #555;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      background: var(--secondary);
+      padding: 32px 8vw 32px 8vw;
+      min-height: 420px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section.blog { }
+    article.post {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(139,0,0,0.06);
+      margin: 0 0 32px 0;
+      padding: 28px 32px 22px 32px;
+      transition: box-shadow 0.2s;
+    }
+    article.post:hover {
+      box-shadow: 0 6px 24px rgba(139,0,0,0.13);
+    }
+    article.post h1 {
+      margin: 0 0 8px 0;
+      font-size: 2rem;
+      color: var(--primary);
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    article.post header p.meta {
+      margin: 0 0 14px 0;
+      font-style: italic;
+      color: #888;
+      font-size: 1rem;
+    }
+    article.post p { font-size: 1.15rem; color: #333; }
+
+    aside.sidebar {
+      background: #fff;
+      padding: 22px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(139,0,0,0.06);
+      margin-top: 12px;
+    }
+    aside.sidebar h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--primary);
+      font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 0.5px;
+    }
+    aside.sidebar ul { margin: 0; padding-left: 18px; }
+    aside.sidebar ul li a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    aside.sidebar ul li a:hover {
+      text-decoration: underline;
+      color: var(--primary-light);
+    }
+
+    footer.site-footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 16px 12px 12px 12px;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      margin-top: 40px;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 -2px 12px rgba(139,0,0,0.06);
+    }
+
+    @media (min-width: 900px) {
+      main {
+        grid-template-columns: 2.5fr 1fr;
+        align-items: start;
+        gap: 40px;
+      }
+      aside.sidebar {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav id="topmenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tutorials</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1>Tama's Simple Blog</h1>
+    <p>Welcome to my personal blog &mdash; sharing thoughts and tutorials!</p>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+    <!-- BLOG CONTENT -->
+    <section class="blog" aria-label="Blog posts">
+      <article class="post">
+        <header>
+          <h1>Just Another Day</h1>
+          <p class="meta">Written by Christina on January 11th</p>
+        </header>
+        <p>This is my second blog entry, and I just wanted to check in on you.</p>
+      </article>
+
+      <article class="post">
+        <header>
+          <h1>My First Blog Entry</h1>
+          <p class="meta">Written by Christina on January 10th</p>
+        </header>
+        <p>I’m so happy to write my first blog entry – yay!</p>
+      </article>
+    </section>
+
+    <aside class="sidebar" aria-label="Sidebar">
+      <h2>Blogroll</h2>
+      <ul>
+        <li><a href="#">My Friend</a></li>
+        <li><a href="#">My Other Friend</a></li>
+        <li><a href="#">My Best Friend</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    &copy; 2025 Tama. All rights reserved.
+  </footer>
+</body>
+</html>
