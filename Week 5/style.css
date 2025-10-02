@@ -1,0 +1,62 @@
+/* Reset & nền */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Căn lề nội dung */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #e0e0e0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Tiêu đề chính */
+.title, .subtitle, h2 {
+    color: #0077cc; /* Màu xanh dương */
+}
+
+/* Thanh ngang */
+hr.divider,
+main hr,
+footer hr {
+    border: none;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #f0f0f0;
+}
