@@ -1,0 +1,291 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #f5f5f5;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #8B0000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #A52A2A;
+}
+
+/* Header Section */
+header {
+    background-color: white;
+    padding: 2.5rem 3rem 1.5rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+    font-weight: bold;
+}
+
+header h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #000;
+}
+
+/* Main Content */
+main {
+    background-color: white;
+    padding: 2rem 3rem;
+    min-height: 70vh;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+/* About Me Section with Image */
+section > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: bold;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #000;
+    margin: 0;
+}
+
+/* Education & Skills Sections */
+section article header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: bold;
+}
+
+section ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+section ul li {
+    padding: 0.3rem 0;
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Contact Form Section */
+.contact-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    font-weight: normal;
+    color: #000;
+    font-size: 1rem;
+    min-width: 100px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 250px;
+    padding: 0.4rem;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.form-group select {
+    width: 250px;
+    padding: 0.4rem;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: white;
+}
+
+.form-group textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #666;
+}
+
+/* File Upload */
+.file-upload-label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.file-upload-label input[type="file"] {
+    display: inline-block;
+}
+
+.file-upload-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #999;
+    border-radius: 3px;
+    color: #000;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.file-info {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 0.6rem 1.5rem;
+    background: white;
+    color: #000;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background: #f0f0f0;
+}
+
+.submit-btn:active {
+    background: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    section > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        width: 100%;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+}
