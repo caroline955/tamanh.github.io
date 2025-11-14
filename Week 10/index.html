@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scrip.js" defer></script>
+</head>
+<body>
+    <form name="frmCal">
+        <div class="calculator">
+            <h2>Mini Calculator</h2>
+
+            <label for="txta">a =</label>
+            <input type="text" name="txta" id="txta" />
+
+            <label for="txtb">b =</label>
+            <input type="text" name="txtb" id="txtb" />
+
+            <label for="slto">Operator:</label>
+            <select name="slto" id="slto">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+                <option value="^">^ (power)</option>
+            </select>
+
+            <label for="txtr">Result:</label>
+            <input type="text" name="txtr" id="txtr" readonly />
+
+            <button type="button" onclick="calculate()">Calculate</button>
+
+            <div id="result" class="message"></div>
+        </div>
+    </form>
+</body>
+</html>

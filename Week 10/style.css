@@ -1,0 +1,94 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eef2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator container */
+.calculator {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Title */
+.calculator h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Form rows */
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.row label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Inputs and dropdown */
+.row input[type="text"],
+.row select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+/* Readonly result field */
+.row input[readonly] {
+    background-color: #eaeaea;
+}
+
+/* Button */
+button {
+    padding: 12px;
+    font-size: 15px;
+    background-color: #f687ae;
+    color: rgb(233, 233, 233);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c1a57;
+}
+
+/* Result message */
+.message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.message.success {
+    color: #42547c;
+    background-color: #e6f4ea;
+}
+
+.message.error {
+    color: #b00020;
+    background-color: #fdecea;
+}
